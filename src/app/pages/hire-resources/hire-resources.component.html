@@ -1,0 +1,175 @@
+<section class="integration-section pt-120" id="hire-resource">
+  <div class="container pt-5">
+    <div class="row align-items-center justify-content-lg-between">
+      <div class="col-lg-7 col-md-12">
+        <div class="section-heading">
+          <h2>Seamlessly scale your tech team with our staff augmentation services.</h2>
+          <p>
+            At IT Futurz, we drive business growth with tailored outsourcing and staff augmentation, connecting you with
+            skilled
+            professionals from India to boost productivity and innovation—without lengthy hiring or training.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="mb-4 mb-lg-0">
+           <a (click)="gotToForm()" class="btn col-12 btn-lg btn-success" style="cursor: pointer;">Select Technology For Developer</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-heading">
+      <h2>Why Hire from Us?</h2>
+      <p>IT Futurz leverages cutting-edge technology and extensive staff augmentation consulting expertise to
+        empower your
+        business need. Our specialized teams streamline the process of acquiring technical talent tailored to your
+        project
+        requirements. With a keen understanding of skills and aptitudes, we ensure seamless onboarding of talent
+        perfectly
+        aligned with your needs.</p>
+    
+      <ul class="list-unstyled d-flex flex-wrap list-two-col mt-4">
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Simple and Transparent Onboarding
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Extensive Vetting Process
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          High Quality at Affordable Price
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Non-Disclosure Agreement
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Flexible Engagement Models
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Complete Team Management
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Timezone Compatibility
+        </li>
+        <li class="py-1">
+          <i class="ri-checkbox-circle-fill me-2 custom-text-green"></i>
+          Tailored and Filtered Experienced Professionals
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="technologies">
+  <div class="container">
+    @if(showForm){
+    <div class="container pb-5" >
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Hire Technology Experts for Your Project</h1>
+        <p class="lead text-success">Through temporary/contract hiring we provide diverse resources to deliver
+          exceptional
+          results for your projects.</p>
+      </div>
+
+      <form ngNativeValidate (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="row mb-3">
+              <div class="col">
+                <div class="form-group">
+                  <label>Full Name<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.fullName" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label>Contact Number<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.contactNumber" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Email ID<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <label>Country<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.country" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <label>City<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.city" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <label>Looking For?<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.lookingFor" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <label>Skills?<code>*</code></label>
+                  <input type="text" [(ngModel)]="form.skills" [ngModelOptions]="{standalone: true}" class="form-control"
+                    required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label>Message<code>*</code></label>
+                  <textarea rows="4" [(ngModel)]="form.message" [ngModelOptions]="{standalone: true}" class="form-control" required></textarea>
+                </div>
+              </div>
+            </div>
+        
+            <div>
+              <button type="reset" class="btn btn-secondary"  (click)="resetForm()" >Reset</button>
+              <button type="submit" class="btn btn-success ms-3">Submit</button>
+            </div>
+        
+          </div>
+        </div>
+      </form>
+    </div>
+    }
+    
+    @if(!showForm){
+    <div class="text-center pt-5 mb-5">
+      <h1 class="display-5 fw-bold">Technologies</h1>
+    </div>
+    
+    @for(dev of developments; track dev.title){
+    <h4 class="mb-3">{{dev.title}}</h4>
+    <div class="row mb-5">
+      <div class="col-12">
+        <ul class="integration-list list-unstyled mt-1">
+          @for(tech of dev.technologies; track tech.title){
+          <li style="cursor: pointer;" class="custom-border" (click)="onSelectTechnology(tech.title)">
+            <div class="single-integration   shadow-sm">
+              <img [src]="tech.hoverimage" alt="integration" class="img-fluid">
+              <h6 class="mb-0 mt-4">{{tech.title}}</h6>
+            </div>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  }
+}
+  </div>
+</section>
+

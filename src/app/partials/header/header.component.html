@@ -1,0 +1,51 @@
+<header class="main-header position-absolute w-100">
+  <nav class="navbar navbar-expand-xl navbar-light sticky-header">
+    <div class="container d-flex align-items-center justify-content-lg-between position-relative">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- CHANGES the Link Of LOGO {index.html} to {/home} for overcome page relod -->
+      <a href="/home" class="navbar-brand">
+        <img src="/images/logo.png" width="80" alt="logo" class="img-fluid ms-5 logo-white">
+        <img src="/images/logo.png" width="80" alt="logo" class="img-fluid ms-5 logo-color">
+      </a>
+
+      <div class="collapse navbar-collapse  justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav " id="dropdown-box">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu dropdown-menu-start ">
+              <li><a class="dropdown-item" href="/services/product-development">Product Developement</a></li>
+              <li><a class="dropdown-item" href="/services/artificial-inteligence">AI & ML</a></li>
+              <li><a class="dropdown-item" href="/services/emerging-trends">Emerging Technologies</a></li>
+              <li><a class="dropdown-item" href="/services/business-consulting">Business Analysis - Consulting</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" href="/exclusive-products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/hire-developers">Hire Developers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-end me-5 d-none d-md-block d-lg-block">
+      <a (click)="getInTouch()" class="btn text-white" style="background-color: #598f39;">Get In Touch</a>
+    </div>
+    
+  </nav>
+</header>

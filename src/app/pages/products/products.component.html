@@ -1,0 +1,32 @@
+<section class="our-integration ptb-120">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-10">
+        <div class="section-heading text-center">
+          <h2>Our Exclusive Products</h2>
+          <p>Discover our exclusive products, crafted to deliver innovation and drive your success forward.</p>
+        </div>
+      </div>
+    </div>
+    <div class="position-relative w-100">
+      <div class="row">
+        @for(product of products; track product.name){
+          <div class="col-lg-4 col-md-6">
+            <div class="position-relative text-decoration-none connected-app-single border border-2 promo-border-hover mt-4 transition-base bg-white rounded-custom d-block overflow-hidden p-5">
+              <div class="position-relative connected-app-content text-center">
+                <div class="integration-logo bg-white w-10 h-10 shadow-lg p-2 d-inline-block">
+                  @if(product.image){
+                    <img [src]="product.image" width="100" alt="integration" class="img-fluid">
+                  }
+                </div>
+                <h5>{{product.name}}</h5>
+                <p class="mb-0 text-muted custom-truncate-text">{{product.description}}</p>
+                <button class="btn custom-button-green mt-2" (click)="getInTouch()" type="button">Inquiry Now</button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

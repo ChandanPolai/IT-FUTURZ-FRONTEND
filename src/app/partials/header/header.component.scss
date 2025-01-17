@@ -1,0 +1,53 @@
+.navbar-nav > .nav-item > .nav-link{
+  font-weight: 500;
+}
+
+.navbar-nav>.nav-item {
+  margin-right: 10px;
+}
+
+/* Default styling for the navbar items */
+.navbar-nav .nav-item {
+  position: relative; /* For positioning the animated line */
+}
+
+/* Animated line effect on hover */
+.navbar-nav .nav-item::after {
+  content: ''; /* Empty content to create the line */
+  position: absolute;
+  bottom: 0; /* Position the line at the bottom of the list item */
+  left: 0; /* Start from the left side */
+  width: 0; /* Initially the line is hidden */
+  height: 2px; /* Set the height of the line */
+  background-color: green; /* Green color for the line */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* On hover, the line will expand from left to right */
+.navbar-nav .nav-item:hover::after {
+  width: 100%; /* The line will expand to fill the width of the list item */
+}
+
+
+
+// add 🤩 Header RESPONIVE NAVBAR COLOR
+#dropdown-box{
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* Mobile Version */
+@media (max-width: 768px) {
+  #dropdown-box {
+    position: static;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,116 @@
+<div class="background w-100">
+  <section class="integration-section pt-120 pb-10" id="book-consult">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="card rounded-custom mt-4">
+            <div class="card-body px-4 py-5">
+              <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold">Book a Consultation</h1>
+                <p class="text-muted">Ready to Code Your Future? Enroll Today!</p>
+              </div>
+
+              <form ngNativeValidate (ngSubmit)="onSubmit()" >
+              <div class="row mb-3">
+                <div class="col">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" [(ngModel)]="form.firstName" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label>Middle Name</label>
+                    <input type="text" [(ngModel)]="form.middleName" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" [(ngModel)]="form.lastName" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <div class="form-group">
+                    <label>Email ID</label>
+                    <input type="text" [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="text" [(ngModel)]="form.contactNumber" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <div class="form-group mb-3">
+                    <label>Qualification</label>
+                    <input type="text" [(ngModel)]="form.qualification" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group mb-3">
+                    <label>College / University</label>
+                    <input type="text" [(ngModel)]="form.collegeUniversity" [ngModelOptions]="{standalone: true}" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group mb-3">
+                    <label>Courses</label>
+                    <select class="form-select" [(ngModel)]="form.course" [ngModelOptions]="{standalone: true}">
+                      <option value="">Please select</option>
+                      <!-- @for(option of courses;track option.value){
+                        <option [value]="option.value">{{option.label}}</option>
+                      } -->
+
+                      <option *ngFor="let option of courses" [value]="option.value">
+                        {{ option.label }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button class="btn btn-secondary" (click)="resetForm()">Reset</button>
+                <button class="btn btn-success ms-3">Submit</button>
+              </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="integration-section pb-4 pt-120">
+  <div class="container pt-5 text-center">
+    <img src="/images/course_help.jpeg" width="70%" alt="" srcset="">
+    <img src="/images/what_learn.jpeg" width="70%" class=" pt-120" alt="" srcset="">
+  </div>
+</section>
+
+<section class="integration-section pb-120">
+  <div class="container text-center">
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <img src="/images/confused.png" class="w-100" alt="" srcset="">
+      </div>
+      <div class="col-md-6">
+        <div>
+          <div class="display-5 fw-bold mt-10">Still Unable to Decide? We got yout back...<br> <a class="text-center" style="cursor: pointer;" (click)="goToForm()">Click here</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="display-6 fw-bold text-center">
+      Want an <span class="text-danger">Exciting Offer</span> for Enrollment? <a class="text-center" style="cursor: pointer;" (click)="goToForm()">Click here</a>
+    </div>
+  </div>
+</section>

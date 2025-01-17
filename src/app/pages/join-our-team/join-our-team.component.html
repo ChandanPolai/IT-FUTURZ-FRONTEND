@@ -1,0 +1,64 @@
+<section class="job-application ptb-120">
+  <div class="container pb-5">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Join Our team</h1>
+      <p class="lead text-success">Be part of something amazing. Apply now to start your journey with us!</p>
+    </div>
+
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-group">
+                <label>Full Name<code>*</code></label>
+                <input type="text" [(ngModel)]="form.fullName" [ngModelOptions]="{standalone: true}" class="form-control" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Contact Number<code>*</code></label>
+                <input type="text" [(ngModel)]="form.contactNumber" [ngModelOptions]="{standalone: true}" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-group">
+                <label>Email ID<code>*</code></label>
+                <input type="email" [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}" class="form-control" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Position Applying For<code>*</code></label>
+                <input type="text" [(ngModel)]="form.position" [ngModelOptions]="{standalone: true}" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="form-group mb-3">
+                <label>Upload CV<code>*</code></label>
+                <input type="file" (change)="onChange($event)" class="form-control">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Cover Letter<code>*</code></label>
+                <textarea rows="4" [(ngModel)]="form.coverLetter" [ngModelOptions]="{standalone: true}" class="form-control" required></textarea>
+              </div>
+            </div>
+          </div>
+      
+          <div>
+            <button type="button" class="btn btn-secondary"(click)="resetForm()">Reset</button>
+            <button class="btn btn-success ms-3">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    
+  </div>
+</section>

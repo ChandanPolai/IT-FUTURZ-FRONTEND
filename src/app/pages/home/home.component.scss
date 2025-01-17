@@ -1,0 +1,38 @@
+*{
+  user-select: text;
+}
+
+.section-app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: -100;
+}
+
+.overlay-screen {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.section-app video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}
+
+/* Centered content over the video */
+.section-app-content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
