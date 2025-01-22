@@ -13,3 +13,18 @@
   background-attachment: fixed;
   margin: 0;
 }
+
+@keyframes pointAnimation {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+/* Apply animation to the hand emoji */
+.pointing-hand {
+  display: inline-block;
+  animation: pointAnimation 1s infinite ease-in-out;
+}
