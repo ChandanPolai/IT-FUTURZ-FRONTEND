@@ -66,6 +66,12 @@ export class ProductsComponent {
       description:
         'Increase you facebook page followers with our Smart NFC Facebook Card such that your brand reach and engagement with your customers can increase.',
     },
+    {
+      image: '/images/products/automatebusiness.jpg',
+      name: 'Automate Business Software',
+      description:
+        'Automate CRM makes your entire sales process seamless – from lead capture to final conversion.',
+    },
   ];
 
   getInTouch() {
