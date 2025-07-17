@@ -1,0 +1,340 @@
+<!-- Automate Business Detail Page with Beautiful Icons -->
+<section class="ptb-120" *ngIf="product && product.id === 'automate-business'">
+  <div class="container">
+
+    <!-- Hero Section with Video -->
+    <div class="row align-items-center mb-5 mt-5 mt-sm-5">
+      <div class="col-lg-6 mb-4">
+        <div class="video-container">
+          <div class="ratio ratio-16x9">
+            <iframe 
+              src="https://www.youtube.com/embed/xMq6X4QPPFo?si=OTN8p6BuPTbVRwhx" 
+              title="Automate Business Software Demo"
+              allowfullscreen
+              class="rounded-custom">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="hero-content">
+          <span class="badge bg-gradient-primary mb-3 fs-6">
+            <i class="fas fa-cogs me-2"></i>{{product.category}}
+          </span>
+          <h1 class="display-4 fw-bold mb-3 text-gradient">
+            <i class="fas fa-robot me-3"></i>{{product.name}}
+          </h1>
+          <p class="lead mb-4">
+            <i class="fas fa-magic me-2 text-primary"></i>{{product.description}}
+          </p>
+          
+          <!-- Stats with Icons -->
+          <div class="stats-row d-flex gap-4 mb-4">
+            <div class="stat-item text-center">
+              <div class="stat-icon mb-2">
+                <i class="fas fa-clock text-primary"></i>
+              </div>
+              <h3 class="text-primary fw-bold">10+</h3>
+              <small class="text-muted">Hours Saved Daily</small>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-icon mb-2">
+                <i class="fas fa-chart-line text-success"></i>
+              </div>
+              <h3 class="text-success fw-bold">95%</h3>
+              <small class="text-muted">Task Automation</small>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-icon mb-2">
+                <i class="fas fa-users text-warning"></i>
+              </div>
+              <h3 class="text-warning fw-bold">500+</h3>
+              <small class="text-muted">Happy Clients</small>
+            </div>
+          </div>
+
+          <!-- CTA Buttons with Icons -->
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn btn-gradient-primary btn-lg px-4" (click)="getInTouch()">
+              <i class="fas fa-paper-plane me-2"></i>Get Quote Now
+            </button>
+            <button class="btn btn-modern-outline btn-lg px-4" (click)="createAccount()">
+              <i class="fas fa-rocket me-2"></i>Create Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="text-center mb-5 section-title">
+          <i class="fas fa-lightbulb me-3 text-warning"></i>How Automate Tasks Works?
+        </h2>
+        
+        <div class="how-it-works">
+          <div class="row">
+            <!-- Step 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="step-card text-center">
+                <div class="step-number">
+                  <i class="fas fa-user-plus"></i>
+                  <span class="number d-none">01</span>
+                </div>
+                <h4><i class="fas fa-cog me-2 text-primary"></i>Set up your account</h4>
+                <div class="step-features">
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Add your teammates, assign roles to each member</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Ensure everyone knows their daily, weekly, and monthly tasks</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Group teams department-wise for quick task assignments</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="step-card text-center">
+                <div class="step-number">
+                  <i class="fas fa-tasks"></i>
+                  <span class="number d-none">02</span>
+                </div>
+                <h4><i class="fas fa-share-alt me-2 text-info"></i>Delegate tasks to your team</h4>
+                <div class="step-features">
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Assign one-time or recurring tasks with detailed descriptions</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Set priority, deadlines, and attachments</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Teammates can update task statuses and request revisions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="step-card text-center">
+                <div class="step-number">
+                  <i class="fas fa-bell"></i>
+                  <span class="number d-none">03</span>
+                </div>
+                <h4><i class="fas fa-mobile-alt me-2 text-success"></i>Team receives notifications</h4>
+                <div class="step-features">
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Instant WhatsApp alerts about new tasks on mobile devices</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Clear task ownership and real-time updates</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Foster responsibility and ownership culture</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-lg-6 col-md-6 mb-4 mx-auto">
+              <div class="step-card text-center">
+                <div class="step-number">
+                  <i class="fas fa-chart-bar"></i>
+                  <span class="number d-none">04</span>
+                </div>
+                <h4><i class="fas fa-analytics me-2 text-warning"></i>Check progress using MIS score</h4>
+                <div class="step-features">
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Track task progress within app with instant notifications</p>
+                  <p><i class="fas fa-check-circle me-2 text-success"></i>Gain insights into team performance to identify improvement areas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Gallery Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="text-center mb-5 section-title">
+          <i class="fas fa-images me-3 text-info"></i>Product Features Gallery
+        </h2>
+        
+        <div class="features-gallery">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item">
+                <img src="https://statics.myclickfunnels.com/workspace/vgMwpJ/image/2017082/file/c5656e6420237a625a7259f95297481f.png" alt="Dashboard View" class="img-fluid rounded-custom">
+                <div class="gallery-overlay">
+                  <i class="fas fa-tachometer-alt fa-3x mb-3"></i>
+                  <h5>Smart Dashboard</h5>
+                  <p>Real-time analytics and insights</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item">
+                <img src="https://statics.myclickfunnels.com/workspace/vgMwpJ/image/2017084/file/b0f64a7dd318c31929c991177b582347.png" alt="Task Management" class="img-fluid rounded-custom">
+                <div class="gallery-overlay">
+                  <i class="fas fa-robot fa-3x mb-3"></i>
+                  <h5>Task Automation</h5>
+                  <p>Effortless task delegation</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item">
+                <img src="https://statics.myclickfunnels.com/workspace/vgMwpJ/image/2017967/file/aed90c28fb5143a55f1b4c9077ff935d.png" alt="Analytics" class="img-fluid rounded-custom">
+                <div class="gallery-overlay">
+                  <i class="fas fa-chart-pie fa-3x mb-3"></i>
+                  <h5>Advanced Analytics</h5>
+                  <p>Detailed performance reports</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Features Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="features-detailed bg-light rounded-custom p-1 p-sm-5">
+          <h2 class="text-center mb-5">
+            <i class="fas fa-star me-3 text-warning"></i>Why Choose Automate Business?
+          </h2>
+          
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-brain text-primary"></i>
+                </div>
+                <h4><i class="fas fa-magic me-2"></i>AI-Powered Automation</h4>
+                <p>Leverage artificial intelligence to automate repetitive tasks and streamline your workflow. Our smart algorithms learn from your patterns and optimize processes automatically.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line text-success"></i>
+                </div>
+                <h4><i class="fas fa-analytics me-2"></i>Real-time Analytics</h4>
+                <p>Get instant insights into your business performance with comprehensive dashboards and detailed reports that help you make data-driven decisions.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-users text-warning"></i>
+                </div>
+                <h4><i class="fas fa-handshake me-2"></i>Team Collaboration</h4>
+                <p>Seamlessly collaborate with your team members, assign tasks, track progress, and ensure everyone stays on the same page with our integrated communication tools.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt text-info"></i>
+                </div>
+                <h4><i class="fas fa-wifi me-2"></i>Mobile Accessibility</h4>
+                <p>Access your business automation tools anywhere, anytime with our responsive web platform and dedicated mobile applications for iOS and Android.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <div class="row mb-5">
+  <div class="col-12">
+    <h2 class="text-center mb-5">
+      <i class="fas fa-comments me-3 text-success"></i>What Our Customers Say
+    </h2>
+    
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card">
+          <div class="testimonial-image mb-3">
+            <img src="https://images.stockcake.com/public/4/7/4/4745b0ce-1fa6-408c-a45d-3d700bfc1271_large/professional-businessman-posing-stockcake.jpg" alt="CEO" class="rounded-circle">
+          </div>
+          <div class="stars mb-3">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+          <p><i class="fas fa-quote-left me-2 text-muted"></i>"Managing team in 10 mins a day"<i class="fas fa-quote-right ms-2 text-muted"></i></p>
+          <div class="customer-info">
+            <i class="fas fa-building me-2 text-primary"></i><strong>CEO, Tech Company</strong>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card">
+          <div class="testimonial-image mb-3">
+            <img src="https://media.istockphoto.com/id/1562983423/photo/portrait-of-mature-businessman-boss-man-serious-thinking-looking-at-camera-businessman-at.jpg?s=612x612&w=0&k=20&c=fgvSI56H_oDzw4qRfWJVfGyDXFAfI_YEqy_DzUvCnHQ=" alt="Operations Manager" class="rounded-circle">
+          </div>
+          <div class="stars mb-3">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+          <p><i class="fas fa-quote-left me-2 text-muted"></i>"Saving 4 hours per day"<i class="fas fa-quote-right ms-2 text-muted"></i></p>
+          <div class="customer-info">
+            <i class="fas fa-briefcase me-2 text-success"></i><strong>Operations Manager</strong>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card">
+          <div class="testimonial-image mb-3">
+            <img src="https://t3.ftcdn.net/jpg/07/08/12/18/360_F_708121825_6YrMqPuC15djMJV1kLYTTGo0xT5V0NBK.jpg" alt="Business Owner" class="rounded-circle">
+          </div>
+          <div class="stars mb-3">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+          <p><i class="fas fa-quote-left me-2 text-muted"></i>"Firefighting to Freedom"<i class="fas fa-quote-right ms-2 text-muted"></i></p>
+          <div class="customer-info">
+            <i class="fas fa-store me-2 text-warning"></i><strong>Business Owner</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Call to Action Section -->
+    <div class="row">
+      <div class="col-12">
+        <div class="cta-section-modern text-center">
+          <div class="cta-icon mb-4">
+            <i class="fas fa-rocket fa-4x text-primary"></i>
+          </div>
+          <h2 class="mb-4">
+            <i class="fas fa-sparkles me-2"></i>Ready to Transform Your Business?
+          </h2>
+          <p class="lead mb-4">
+            <i class="fas fa-users me-2 text-primary"></i>Join thousands of businesses already using Automate Business Software to streamline their operations and boost productivity.
+          </p>
+          
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button class="btn btn-gradient-primary btn-lg px-5" (click)="createAccount()">
+              <i class="fas fa-play me-2"></i>Start Free Trial
+            </button>
+            <button class="btn btn-modern-outline btn-lg px-5" (click)="getInTouch()">
+              <i class="fas fa-calendar-alt me-2"></i>Schedule Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
