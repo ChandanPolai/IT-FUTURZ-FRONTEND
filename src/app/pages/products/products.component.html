@@ -21,7 +21,19 @@
                 </div>
                 <h5>{{product.name}}</h5>
                 <p class="mb-0 text-muted custom-truncate-text">{{product.description}}</p>
-                <button class="btn custom-button-green mt-2" (click)="getInTouch()" type="button">Inquiry Now</button>
+                <!-- <button class="btn custom-button-green mt-2" (click)="getInTouch()" type="button">Inquiry Now</button> -->
+           <div class="d-flex flex-column flex-sm-row gap-2 mt-3 justify-content-center">
+  <button class="btn custom-button-green" (click)="getInTouch()" type="button">
+    Inquiry Now
+  </button>
+<button 
+  *ngIf="product.id === 'automate-business'" 
+  class="btn btn-outline-primary" 
+  (click)="viewProductDetails(product)" 
+  type="button">
+  View More Info
+</button>
+</div>
               </div>
             </div>
           </div>

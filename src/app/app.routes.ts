@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { JoinOurTeamComponent } from './pages/join-our-team/join-our-team.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HireResourcesComponent } from './pages/hire-resources/hire-resources.component';
 import { ErrorComponent } from './pages/error/error.component';
@@ -28,6 +29,7 @@ export const routes: Routes = [
   },
   { path: 'join-our-team', component: JoinOurTeamComponent },
   { path: 'exclusive-products', component: ProductsComponent },
+  { path: 'product-detail/:id', component: ProductDetailComponent }, 
   { path: 'hire-developers', component: HireResourcesComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'about', component: AboutComponent },
